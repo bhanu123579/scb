@@ -28,7 +28,11 @@ DEBUG = True
 
 import os
 
-ALLOWED_HOSTS = [os.environ.get('www.scbonline.in', 'scbonline.in','RENDER_EXTERNAL_HOSTNAME', '127.0.0.1')]
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+
+ALLOWED_HOSTS = ['www.scbonline.in', 'scbonline.in', '127.0.0.1', 'localhost']
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 
