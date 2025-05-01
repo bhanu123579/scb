@@ -2,10 +2,10 @@ from django.shortcuts import render
 
 # Create your views here.
 # Home view - renders the home page
-def login(request):
+def home(request):
     return render(request, 'netbanking/home.html')
 
-def online(request):
+def login(request):
     return render(request, 'netbanking/login.html')
 
 def otp_page(request):

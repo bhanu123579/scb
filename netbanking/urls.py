@@ -4,8 +4,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.login, name='home'),  # this is the homepage for the app
-    path('online.html', views.online, name='online'),
+    path('', views.home, name='home'),  # this is the homepage for the app
+    path('login.html', views.login, name='login'),
 path('otp_page.html', views.otp_page, name='otp_page'),
 path('landing.html', views.landing, name='landing'),
 path('estatement_page.html', views.estatement_page, name='estatement_page'),
